@@ -179,8 +179,8 @@ def render_page(page, info):
   if url.endswith('/'):
     url = url.rstrip('/')
   conf = {
-    'base_url': url + api_spec_static,
-    'full_base_url': url + api_spec_static
+    'base_url': req_registry['basePath'] + req_registry['spec_endpoint_path'] + '/_/static/',
+    'full_base_url': req_registry['basePath'] + req_registry['spec_endpoint_path'] + '/_/static/'
   }
   if info is not None:
     conf.update(info)
