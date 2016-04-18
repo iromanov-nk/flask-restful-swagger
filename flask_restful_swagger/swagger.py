@@ -300,7 +300,7 @@ class SwaggerEndpoint(object):
       op = {
           'method': method,
           'parameters': path_arguments,
-          'nickname': 'nickname'
+          'nickname': '{0}_{1}'.format(method.lower(), resource.__name__.lower())
       }
       op['summary'], op['notes'] = _parse_doc(method_impl)
 
